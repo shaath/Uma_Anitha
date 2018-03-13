@@ -1,0 +1,22 @@
+package pom;
+
+import javax.security.auth.login.LoginException;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class LoginTC_POM {
+
+	public static void main(String[] args) 
+	{
+		WebDriver driver=new FirefoxDriver();
+		LoginPage lp=PageFactory.initElements(driver, LoginPage.class);
+		
+		driver.get(lp.url);
+		
+		lp.org_Login(lp.u,lp.p);
+
+	}
+
+}

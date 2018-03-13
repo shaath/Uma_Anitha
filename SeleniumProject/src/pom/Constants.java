@@ -1,0 +1,11 @@
+package pom;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class Constants 
+{
+	public static WebDriver driver=null;
+	public static LoginPage lp=PageFactory.initElements(driver, LoginPage.class);
+	public static Homepage hp=PageFactory.initElements(driver, Homepage.class);	
+}

@@ -1,0 +1,25 @@
+package pom;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.server.browserlaunchers.Sleeper;
+import org.openqa.selenium.support.PageFactory;
+
+public class LoginTC_POM extends Constants{
+
+	public static void main(String[] args) 
+	{
+		driver=new FirefoxDriver();
+		driver.get(lp.url);
+		
+		lp.org_Login(lp.u,lp.p);
+		
+		Sleeper.sleepTightInSeconds(3);
+		
+		hp.welcomeclick();
+		hp.logoutclick();
+		
+		driver.close();
+		
+	}
+
+}
